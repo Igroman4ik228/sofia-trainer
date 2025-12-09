@@ -1,64 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+  <head>
+    <!-- Кодировка символов UTF-8 -->
+    <meta charset="UTF-8" />
+    <!-- Совместимость с IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<head>
+    <!-- Адаптивный дизайн -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<!-- Defines the character encoding in UTF-8 -->
-	<meta charset="UTF-8">
+    <!-- Заголовок страницы в браузере -->
+    <title>Акробатика для детей | Тренировки с Софией</title>
 
-	<!-- Compatible with IE -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
 
-	<!-- Responsive Web Design -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO метатеги -->
+    <!-- Описание страницы -->
+    <meta
+      name="description"
+      content="Спортивная секция акробатики для детей 5-14 лет с тренером Софией. Первое занятие бесплатно! Запись онлайн через WhatsApp или Telegram."
+    />
+    <!-- Ключевые слова -->
+    <meta
+      name="keywords"
+      content="акробатика, спортивная секция, дети, тренировки, спорт, фристайл, гимнастика"
+    />
+    <!-- Автор -->
+    <meta name="author" content="Sofia Acrobatics" />
 
-	<!-- The title of the document on the browser tab -->
-	<title>Template</title>
+    <meta name="apple-mobile-web-app-title" content="Sofia Acrobatics" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-	<!-- Favicon https://realfavicongenerator.net/ -->
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:site_name" content="Sofia Acrobatics" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Акробатика для детей с тренером Софией"
+    />
+    <meta
+      property="og:description"
+      content="Спортивная секция акробатики для детей 5-14 лет. Первое занятие бесплатно!"
+    />
+    <meta property="og:image" content="./img/og-image.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    <link rel="canonical" href="https://example.com" />
 
-	<!-- SEO -->
-	<!-- Page Description -->
-	<meta name="description" content="Template web page">
-	<!-- Keywords for promotion -->
-	<meta name="keywords" content="html, css, sass, scss, webdev">
-	<!-- Author's name -->
-	<meta name="author" content="igroman4ik">
+    <!-- Отключение форматирования номеров телефонов -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
 
-	<meta name="apple-mobile-web-app-title" content="Template">
-	<meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Schema.org разметка для спортивной секции -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "Секция акробатики Софии",
+        "description": "Спортивная секция акробатики для детей 5-14 лет",
+        "url": "https://example.com",
+        "telephone": "+7 (910) 976-89-99",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Спортивная, д. 5",
+          "addressLocality": "Ваш город",
+          "addressRegion": "Ваш регион",
+          "postalCode": "000000",
+          "addressCountry": "RU"
+        },
+        "sameAs": ["https://vk.com/id215177858", "https://t.me/sonyaalekseeva"],
+        "priceRange": "Бесплатно",
+        "image": "./img/og-image.jpg",
+        "areaServed": {
+          "@type": "City",
+          "name": "Ваш город"
+        }
+      }
+    </script>
 
-	<meta property="og:site_name" content="Template">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Template web page">
-	<meta property="og:description" content="Описание">
-	<meta property="og:image" content="./img/favicons/android-chrome-512x512.png">
-	<meta property="og:url" content="https://example.com">
-	<!-- <link rel="canonical" href="https://example.com"> -->
-
-	<!-- Disable formatting of phone numbers and address -->
-	<meta name="format-detection" content="telephone=no">
-	<meta name="format-detection" content="address=no">
-
-
-	<!-- Local fonts -->
-	<!-- <link rel="preload" href="./fonts/subset-ChakraPetch-Regular.woff" as="font" type="font/woff2" crossorigin>
+    <!-- Локальные шрифты -->
+    <!-- <link rel="preload" href="./fonts/subset-ChakraPetch-Regular.woff" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="./fonts/fonts.css" media="print" onload="this.media='all'" /> -->
 
-	<link rel="stylesheet" href="./css/main.css" />
-</head>
+    <link rel="stylesheet" href="./css/main.css" />
 
-<body>
+    <!-- AOS (Animate On Scroll) для анимаций -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
 
-	@@include('blocks/header.html')
-	<main class="main">
-		<h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In qui ratione molestias, excepturi tenetur quos,
-			veritatis quae at ut vitae et. Debitis quam in natus omnis sint repellat voluptate ipsum.</h1>
-	</main>
-	@@include('blocks/footer.html')
+  <body>
+    <!-- Хедер с логотипом и навигацией -->
+    @@include('./blocks/header.html')
 
-	<script src="./js/index.js"></script>
-</body>
+    <!-- Мобильное меню -->
+    @@include('./blocks/mobile-nav.html')
 
+    <!-- Основное содержимое -->
+    <main class="main">
+      <!-- Герой-секция -->
+      @@include('./blocks/hero.html')
+
+      <!-- О тренере Софии -->
+      @@include('./blocks/about-trainer.html')
+
+      <!-- Программа и расписание -->
+      @@include('./blocks/programs.html')
+
+      <!-- Галерея фото -->
+      @@include('./blocks/gallery.html')
+
+      <!-- Отзывы -->
+      @@include('./blocks/reviews.html')
+
+      <!-- Контакты -->
+      @@include('./blocks/contacts.html')
+    </main>
+
+    <!-- Подвал -->
+    @@include('./blocks/footer.html')
+
+    <!-- JavaScript основной файл -->
+    <script src="./js/index.js"></script>
+
+    <!-- AOS инициализация -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out-quad",
+        once: false,
+      });
+    </script>
+  </body>
 </html>

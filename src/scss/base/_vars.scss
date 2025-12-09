@@ -1,20 +1,48 @@
 :root {
-	--container-width: 1200px;
-	--container-padding: 15px;
+  --container-width: 1200px;
+  --container-padding: 15px;
 
-	--font-main: 'Chakra Petch', sans-serif;
-	--font-accent: 'Chakra Petch', serif;
+  /* Типографика */
+  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-accent: "Arial", sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
 
-	--page-bg: #fff;
-	--text-color: #000;
-	--accent: #ac182c;
+  /* Цветовая гамма для детской спортивной секции */
+  --color-primary: #ff6b6b; /* Яркий красный - основной цвет */
+  --color-secondary: #4ecdc4; /* Бирюзовый - вспомогательный */
+  --color-accent: #ffe66d; /* Жёлтый - акценты */
+  --color-dark: #2c3e50; /* Тёмно-синий - текст */
+  --color-light: #ecf0f1; /* Светлый серый - фоны */
+  --color-white: #ffffff; /* Белый */
+  --color-success: #27ae60; /* Зелёный */
+  --color-warning: #e67e22; /* Оранжевый */
 
-	--laptop-size: 1199px;
-	--tablet-size: 959px;
-	--mobile-size: 599px;
+  /* Фоны */
+  --page-bg: #ffffff;
+  --text-color: #2c3e50;
+  --accent: #ff6b6b;
+
+  /* Breakpoints */
+  --laptop-size: 1199px;
+  --tablet-size: 959px;
+  --mobile-size: 599px;
+
+  /* Тени и пробелы */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
 }
 
 .dark {
-	--page-bg: #252526;
-	--text-color: #fff;
+  --page-bg: #1a1a2e;
+  --text-color: #ecf0f1;
+  --color-dark: #ecf0f1;
 }

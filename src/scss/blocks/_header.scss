@@ -1,14 +1,109 @@
 .header {
-	background-color: rgb(195, 220, 231);
-	padding: 50px 0;
+  background: linear-gradient(135deg, #5dd9d9 0%, #ff8a80 100%);
+  padding: var(--spacing-lg) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
 
-	&>.container>.row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+  .container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-lg);
 
-		&>.logo {
-			font-size: 32px;
-		}
-	}
+    @media (max-width: 768px) {
+      gap: var(--spacing-md);
+    }
+  }
+}
+
+.logo {
+  flex-shrink: 0;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+  }
+
+  &__accent {
+    font-weight: 400;
+    color: var(--color-accent);
+  }
+}
+
+.nav {
+  flex: 1;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__link {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-accent);
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--color-accent);
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.mobile-nav-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  padding: var(--spacing-sm);
+
+  @media (min-width: 1024px) {
+    display: none !important;
+  }
 }

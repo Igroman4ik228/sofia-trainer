@@ -1,0 +1,106 @@
+/* Блок о тренере */
+.about-trainer {
+  padding: var(--spacing-2xl) 0;
+  background-color: var(--color-white);
+
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.about-trainer__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+.about-trainer__photo {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-trainer__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.about-trainer__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.about-trainer__name {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-trainer__bio {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-dark);
+}
+
+.about-trainer__achievements {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  background-color: var(--color-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 8px;
+}
+
+.about-trainer__achievements-title {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  align-items: flex-start;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  &__text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-dark);
+  }
+}
+
+.about-trainer__bottom {
+  font-size: 0.95rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+
+  strong {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+}
