@@ -10,11 +10,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--spacing-2xl) var(--spacing-lg);
-  background: linear-gradient(
-    135deg,
-    var(--color-secondary) 0%,
-    var(--color-primary) 100%
-  );
+  background: linear-gradient(135deg, #5dd9d9 0%, #78a0e5 100%);
   transition: top 0.3s ease-in-out;
 
   &.is-open {

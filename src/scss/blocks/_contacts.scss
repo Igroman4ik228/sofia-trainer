@@ -150,11 +150,7 @@
 }
 
 .contacts__cta {
-  background: linear-gradient(
-    135deg,
-    var(--color-secondary) 0%,
-    var(--color-primary) 100%
-  );
+  background: linear-gradient(135deg, var(--color-primary) 0%, #e6a4a4 100%);
   color: var(--color-white);
   padding: var(--spacing-2xl) var(--spacing-lg);
   border-radius: 16px;
