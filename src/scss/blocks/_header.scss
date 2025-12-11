@@ -1,8 +1,10 @@
 .header {
   background: linear-gradient(135deg, #5dd9d9 0%, #78a0e5 100%);
   padding: var(--spacing-lg) 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   box-shadow: var(--shadow-sm);
 

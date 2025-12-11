@@ -1,4 +1,4 @@
-/* Блок о тренере */
+/* Блок о тренерах */
 .about-trainer {
   padding: var(--spacing-2xl) 0;
   background-color: var(--color-white);
@@ -8,63 +8,117 @@
   }
 }
 
-.about-trainer__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-2xl);
-  align-items: center;
+.about-trainer__intro {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 700px;
+  margin: var(--spacing-lg) auto var(--spacing-2xl);
+  padding: 0 var(--spacing-md);
+}
 
-  @media (max-width: 768px) {
+/* Сетка тренеров */
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-2xl);
+
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
   }
 }
 
-.about-trainer__photo {
-  overflow: hidden;
+/* Карточка тренера */
+.trainer-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
   border-radius: 16px;
-  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
 }
 
-.about-trainer__img {
+.trainer-card__photo {
+  overflow: hidden;
+  height: 350px;
+  background-color: var(--color-light);
+}
+
+.trainer-card__img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+
+  .trainer-card:hover & {
+    transform: scale(1.05);
+  }
 }
 
-.about-trainer__text {
+.trainer-card__content {
+  padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
 }
 
-.about-trainer__name {
-  font-size: 1.8rem;
+.trainer-card__name {
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: var(--spacing-sm);
+  margin: 0;
 }
 
-.about-trainer__bio {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--color-dark);
+.trainer-card__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: -0.5rem 0 0.5rem 0;
 }
 
-.about-trainer__achievements {
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-lg);
-  background-color: var(--color-light);
+.trainer-card__bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+.trainer-card__achievements {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--color-white);
   border-left: 4px solid var(--color-primary);
   border-radius: 8px;
 }
 
-.about-trainer__achievements-title {
-  font-size: 1.2rem;
-  margin-bottom: var(--spacing-md);
+.trainer-card__achievements-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
   color: var(--color-primary);
 }
 
+.trainer-card__specialization {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid #e0e0e0;
+  margin-bottom: 0;
+}
+
+/* Список достижений */
 .achievements-list {
   list-style: none;
   padding: 0;
@@ -73,7 +127,7 @@
 
 .achievement {
   display: flex;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
   align-items: flex-start;
 
@@ -91,16 +145,5 @@
     font-size: 0.95rem;
     line-height: 1.5;
     color: var(--color-dark);
-  }
-}
-
-.about-trainer__bottom {
-  font-size: 0.95rem;
-  color: var(--color-dark);
-  line-height: 1.6;
-
-  strong {
-    color: var(--color-primary);
-    font-weight: 600;
   }
 }
