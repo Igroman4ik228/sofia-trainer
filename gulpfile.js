@@ -56,7 +56,7 @@ const htmlminOption = {
 
 const imageminOption = [
   imagemin.gifsicle({ interlaced: true }),
-  imagemin.mozjpeg({ quality: 100, progressive: true }),
+  imagemin.mozjpeg({ quality: 85, progressive: true }),
   imagemin.optipng({ optimizationLevel: 2 }),
 ];
 
